@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #000000;
+    --color-heading: #4230a9;
+    --color-base: #f699cd;
+    --color-base2: #fbdfef;
+    --color-brand: #414a52;
+    --color-brand2: rgb(24, 58, 74);
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+img{
+	width: 100%;
+	height: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-brand2);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-heading);
+	text-decoration: none;
+}
+.navbar{
+	background-color:var(--color-base);
+}
+
+.navbar .nav-link{
+	font-weight: 700;
+	font-size: large;
+	color: var(--color-brand2);
+}
+.navbar .nav-link:hover{
+	color: white;
+}
+.navbar .nav-link.active{  
+	color: white;
+}
+
+.full-height{
+	min-height: 100vh;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	align-items: center;
+	border-bottom: 0.1px var(--color-heading) solid;
+}
+
+.text-brand{
+	color: var(--color-brand2);
+}
+.bg-base{
+	background-color: var(--color-base);
+}
+
+@media (min-width:990px){ 
+	.navbar{
+		min-height: 100vh;
+		width:var(--sidbar-width);
+		background:linear-gradient(#f5bcdc,#f6bedf),url(images\sidebar.webp);
+		background-size: cover;
+		background-position: center;
+	}
+	.navbar-brand img{
+	border: 3px solid rgb(17, 41, 53) ;
+	height: 120px;
+	}
+	#content-wrapper{
+		padding-left:var(--sidbar-width) ;
+	}
+}
+
+.btn{
+	padding: 12px 28px;
+	font-size: 700;
+	font-weight: bold;
+}
+
+.btn-brand{
+	background-color: var(--color-brand);
+	border-color: var(--color-brand);
+	color: rgb(235, 229, 229);
+}
+
+.btn-brand:hover, .btn-brand:focus{
+	background-color: var(--color-brand2);
+	color: var(--color-heading);
+}
+
+.link-custom{
+	margin-left: 20px;
+	font-weight: bold;
+	font-size:large;
+	position: relative;
+}
+
+.link-custom::after{
+	content: "";
+	width: 0%;
+	height: 2px;
+	background-color: var(--color-heading);
+	position: absolute;
+	top: 110%;
+	left: 0;
+	transition: all 0.5s;
+	color: var(--color-heading);
+}
+.link-custom:hover::after{
+	width: 100%;
+	color: var(--color-heading);
+}
+
+.shadow-effect{
+	transition: all 0.1s;
+}
+
+.shadow-effect:hover{
+	box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox{
+	width: 60px;
+	height: 60px;
+	background-color: var(--color-brand);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--color-base2);
+	font-size: 32px;
+}
+
+.rounded{
+	border-radius: 20px;
+}
+
+.link-custom:hover::after{
+	width: 100%;
+}
+
+.card-custom .card-custom-image{
+	overflow: hidden;
+	
+}
+.card-custom .card-custom-image img{
+	transition: all 0.4s ;
+}
+
+.card-custom:hover .card-custom-image img{
+	transform: scale(1.1);
+}
+
+#contact .form-control{
+	background-color: var(--color-base);
+	border-color: var(--color-base2);
+	color: var(--color-body);
+}
+
+.social-links a{
+	font-size: 25px;
+}
